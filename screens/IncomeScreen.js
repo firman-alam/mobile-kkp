@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { View, SafeAreaView, FlatList, ActivityIndicator } from 'react-native';
 import Card from '../components/Card';
+import FocusedStatusBar from '../components/FocusedStatusBar';
 import { COLORS } from '../constants';
 
 const IncomeScreen = () => {
@@ -28,6 +29,7 @@ const IncomeScreen = () => {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
+      <FocusedStatusBar background={COLORS.darkgreen} />
       {loading ? (
         <ActivityIndicator />
       ) : (
